@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Contatos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Lista de Contatos</h2>
+        <form id="formulario" class="form-container">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required pattern="[0-9]{10}">
+            </div>
+            <button type="button" onclick="adicionarContato()" class="btn">Cadastrar</button>
+        </form>
+    
+        <table id="tabelaContatos" class="table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    
+        <button type="button" onclick="limparTabela()" class="btn limpar-btn">Limpar Tabela</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
